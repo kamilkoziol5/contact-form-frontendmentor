@@ -1,0 +1,187 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 16px;
+  font-family: "Karla", sans-serif;
+}
+
+:root {
+  --green: hsl(147, 100%, 88%);
+  --green600: hsl(169, 82%, 27%);
+  --Red: (0, 66%, 54%);
+  --White: hsl(0, 0%, 100%);
+  --grey500: hsl(186, 15%, 59%);
+  --grey900: hsl(187, 24%, 22%);
+}
+
+section {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--green);
+}
+section span {
+  font-size: 14px;
+  color: var(--grey900);
+  margin-bottom: 8px;
+}
+section input {
+  padding: 10px;
+  border-radius: 8px;
+  outline: none;
+  border: 1px solid var(--grey500);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+section input:focus, section input:hover {
+  border: 1px solid var(--green600);
+}
+section input[type=checkbox] {
+  -moz-appearance: none;
+       appearance: none;
+  -webkit-appearance: none;
+  width: 20px;
+  height: 20px;
+  padding: 5px;
+  border: 1px solid var(--grey500);
+  border-radius: 50%;
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+  outline: none;
+  background-color: transparent;
+  transition: all 0.3s ease;
+}
+section input[type=checkbox]:active, section input[type=checkbox]:focus {
+  border: 1px solid var(--green600);
+}
+section input[type=checkbox]::before {
+  content: "";
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  background-color: transparent;
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: background-color 0.3s ease;
+}
+section input[type=checkbox]:checked::before {
+  background-color: var(--green600);
+}
+section .container {
+  margin: 0 1rem;
+  width: 600px;
+  background-color: var(--White);
+  padding: 30px;
+  border-radius: 12px;
+}
+section .container .title {
+  color: var(--grey900);
+  font-size: 23px;
+  font-weight: 700;
+  margin-bottom: 30px;
+}
+section .container form {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+section .container form .row {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+}
+section .container form .row .col {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+section .container form .email {
+  display: flex;
+  flex-direction: column;
+}
+section .container form .radio {
+  background-color: rgba(255, 0, 0, 0);
+}
+section .container form .radio .row-check {
+  display: flex;
+  gap: 12px;
+  justify-content: space-between;
+}
+section .container form .radio .row-check .col {
+  display: flex;
+  gap: 12px;
+  width: 100%;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid var(--grey500);
+  margin-top: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+section .container form .radio .row-check .col:focus, section .container form .radio .row-check .col:hover {
+  border: 1px solid var(--green600);
+  background-color: var(--green);
+}
+section .container form .radio .row-check .col label {
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--grey900);
+}
+section .container form .radio .row-check .col input {
+  border-radius: 50%;
+}
+section .container form .message {
+  display: flex;
+  flex-direction: column;
+}
+section .container form .message textarea {
+  padding: 10px;
+  border-radius: 8px;
+  outline: none;
+  border: 1px solid var(--grey500);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+section .container form .check {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+section .container form .check label {
+  font-size: 14px;
+  color: var(--grey900);
+  margin-bottom: 0;
+  cursor: pointer;
+}
+section .container form .check input[type=checkbox] {
+  border-radius: 0;
+}
+section .container form .button input {
+  width: 100%;
+  display: block;
+  background-color: var(--green600);
+  padding: 15px;
+  color: var(--White);
+  border: none;
+  outline: none;
+  transition: all 0.3s ease;
+  font-weight: 700;
+}
+section .container form .button input:hover {
+  background-color: #002921;
+}
+
+@media (max-width: 550px) {
+  section .container form .row {
+    flex-direction: column;
+  }
+  section .container form .radio .row-check {
+    flex-direction: column;
+  }
+}/*# sourceMappingURL=style.css.map */
